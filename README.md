@@ -712,10 +712,9 @@ input[id="searchStr"] {
 }
 ```
 
+### PHP API
 
-### PHP api
-``` php code
-
+``` 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
