@@ -6,14 +6,14 @@ Licensed under GPL license. You may Fork this repo and create a new branch for y
 - See demo with audio at: http://trueislamfromquran.com/quranaudio/
 
 It was built using :
-    - AngularJS 
-    - HTML
-    - Jquery
-    - CSS3
-    - Ajax
-    - JSON
-    - MySQL
-    - PHP
+ - AngularJS 
+ - HTML
+ - Jquery
+ - CSS3
+ - Ajax
+ - JSON
+ - MySQL
+ - PHP
 
 ## Code Source
 
@@ -717,8 +717,6 @@ input[id="searchStr"] {
 ### PHP api
 ``` php code
 
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
 
 // REST API to get data using HTTP request
   
