@@ -99,6 +99,7 @@ app.controller('contentCtrl', function($scope, $http) {
                     $('#loader').html('');
                     $scope.leftPanel = false;
 					//$('.audioDiv').html('<audio controls><source src="audio/'+$scope.selectedReceiter+'/'+('000'+sura).slice(-3)+'.mp3" type="audio/mpeg"></audio>');
+					//console.log(xVar1);
                 });
             }
 });
