@@ -1,8 +1,9 @@
 # Quran AmgularJS 
+
 is an SPA (single Page Application) to display Quran Chapers/Verses ith nice effects and interaction. 
 Licensed under GPL license. You may Fork this repo and create a new branch for your patch.
-         * See demo without audio at : http://trueislamfromquran.com/quran/
-         * See demo with audio at: http://trueislamfromquran.com/quranaudio/
+- See demo without audio at : http://trueislamfromquran.com/quran/
+- See demo with audio at: http://trueislamfromquran.com/quranaudio/
 
 It was built using :
     * AngularJS 
@@ -721,7 +722,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // REST API to get data using HTTP request
   
-	$sura = (isset($_REQUEST['sura']))? trim($_REQUEST['sura']) : '';
+    $sura = (isset($_REQUEST['sura']))? trim($_REQUEST['sura']) : '';
     $c = (isset($_REQUEST['c']))? $_REQUEST['c'] : '';
 	$searchMe = (isset($_REQUEST['searchMe']))? $_REQUEST['searchMe'] : '';
 	$searchIndex = (isset($_REQUEST['searchIndex']))? $_REQUEST['searchIndex'] : 0;
