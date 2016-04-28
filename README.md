@@ -713,9 +713,9 @@ input[id="searchStr"] {
 
 
 ``` 
-## PHP api
+### PHP api
 ``` php code
-<?php
+
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
@@ -790,6 +790,4 @@ function getSuraNameJSON(){
 		return chop($data,"\,").']}' ;
 }
 
-
-?>
 ```
