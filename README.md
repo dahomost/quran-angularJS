@@ -1,8 +1,8 @@
 # Quran AmgularJS 
-      is an SPA (single Page Application) to display Quran Chapers/Verses ith nice effects and interaction. 
-      Licensed under GPL license. You may Fork this repo and create a new branch for your patch.
-         * ee demo ithout audio at : 
-         * ee demo ith audio at: 
+is an SPA (single Page Application) to display Quran Chapers/Verses ith nice effects and interaction. 
+Licensed under GPL license. You may Fork this repo and create a new branch for your patch.
+         * See demo without audio at : http://trueislamfromquran.com/quran/
+         * See demo with audio at: http://trueislamfromquran.com/quranaudio/
 
 It was built using :
     * AngularJS 
@@ -712,7 +712,7 @@ input[id="searchStr"] {
 }
 
 
-``` 
+
 ### PHP api
 ``` php code
 
