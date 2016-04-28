@@ -710,7 +710,7 @@ input[id="searchStr"] {
   }
 
 }
-
+```
 
 
 ### PHP api
@@ -751,7 +751,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 function getSuraTextJSON($sura){
     global $conn;
-	$sql  = "SELECT  `aya`, `text` FROM `quran_text` where sura=".$sura;
+	$sql  = "SELECT  aya, text FROM quran_text where sura=".$sura;
     $result = mysqli_query($conn, $sql);
 	$data = '{"quranKarim":[';
 	 
@@ -765,7 +765,7 @@ function getSuraTextJSON($sura){
 
 function searchWordsJSON($searchMe, $searchIndex) {
   global $conn;
-  $sql = "SELECT chapters.name as sura, qs.aya, qs.text FROM `quran_search` qs INNER JOIN `quran_text` qt on qs.sura=qt.sura and qs.aya=qt.aya INNER JOIN chapters on qs.sura=chapters.index WHERE qs.text LIKE '%".$searchMe."%'";
+  $sql = "SELECT chapters.name as sura, qs.aya, qs.text FROM quran_search qs INNER JOIN quran_text qt on qs.sura=qt.sura and qs.aya=qt.aya INNER JOIN chapters on qs.sura=chapters.index WHERE qs.text LIKE '%".$searchMe."%'";
   $result = mysqli_query($conn, $sql);
   $data = '{"searchMe":[';
 	 
@@ -780,7 +780,7 @@ function searchWordsJSON($searchMe, $searchIndex) {
 
 function getSuraNameJSON(){
     global $conn;
-	$sql  = "SELECT  `index`, `name` FROM `chapters`";
+    $sql  = "SELECT  index, name FROM chapters";
     $result = mysqli_query($conn, $sql);
 	$data = '{"chapters":[';
 	 
