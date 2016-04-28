@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+	<title>Quran | Chapters & Verses</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+    <meta name="author" content="">
+	
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="apple-touch-startup-image-640x1096.png">
+	<link rel="stylesheet" href="myStyle.css">
+
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript" ></script>
+	<script src="js/app.js" type="text/javascript" ></script>
+	
+</head>
+
+<body id="mobile_wrap" ng-app="myApp" ng-controller="contentCtrl">
+
+<!-- --------------------------------------------------- Sura List -->
+
+<div class="user-nav" ng-show="leftPanel">
+بحث
+<br /><input id="searchStr" ng-model="searchStr" type="text" placeholder="اسم أو رقم السورة">
+	<ul id="ul1">
+		<li ng-repeat=" y in achapters | filter : searchStr " ng-click="leftPanel=!leftPanel">
+			<a ng-click="getSura(y.index, y.name)">
+			<span class="sn left">{{ y.index }}</span> {{ y.name }}
+			</a>
+		</li>
+	</ul>
+</div>
+    
+<!-- --------------------------------------------------- Top Panel & Sura text -->
+
+<div class='container' ng-init="$scope.toggle = false; sel1=0; getSura(1, 'الفاتحة');">
+
+	<div id="topBar"><div class="menuWrapper">
+	  
+		<div class="inlineDiv">
+			<table><tr>
+			<td>  من الآية </td>
+			<td><select ng-model="sel1" ng-options="z for z in ayatCount"  ng-selected="sel1"></select></td>
+			<td>الى الآية </td><td><select ng-model="sel2" ng-options="z for z in ayatCount"  ng-selected="sel2"></select></td>
+			</tr></table>
+		</div>
+		
+		<div class="inlineDiv">
+			<table><tr>
+			<td><button id="searchButton" ng-click="searchWords(searchMe);"><img src="images/search.png" width="20"></button></td>
+			<td><input id="searchQuran" ng-model="searchMe" type="text" placeholder="بحث في القرءان"></td>
+			</tr></table>
+		</div>	
+		
+	   	<div class="inlineDiv" ng-click="leftPanel=!leftPanel">
+			<a><span style="color: #ff0;">السور</span><img src="images/menu.png" alt="Chapters List - قائمة السور" title="Chapters List - قائمة السور" align="left"/></a>
+		</div>
+		
+	</div></div>
+	
+	<div id="suratText" class="suratText" ng-click="leftPanel=false">
+
+	    <div id="loader"></div>
+
+	    <div style="float: right; position: absolute; top: 0;" onclick="SelectAll('selectAll')"><img src="images/copy.png"></div>
+      	<div id="serchedVerses"></div>
+		
+        <div id="selectAll">
+		<div class="suraTitle" ng-show="showSuraTitle">سورة {{suraName}}</div>
+		<div class="bismiDiv" ng-show="showBismiDiv"><img ng-show="showBismi" src="images/bismi2.png" ng-if="((1*suraNbr==1 && 1*sel1==2) || (sel1==1)) ">
+            <span ng-show="firstAyatNbr" ng-if=" 1*suraNbr==1 && 1*sel1<=2 ">
+            <span class="vn1">﴿&#xFEFF;١&#xFEFF;﴾</span>
+            </span>
+        </div>
+			
+		<span ng-click="toggle = !toggle" ng-class="{verseClicked : toggle}" ng-repeat="x in asura" ng-if="1*x.aya>=1*sel1 && 1*x.aya<=1*sel2" id="aya{{ x.aya }}">
+			{{ x.text }} <span class="vn">﴿&#xFEFF;{{ x.aya | nbrFilter }}&#xFEFF;﴾</span>
+	    </span>
+        </div>
+    </div>		
+</div>  
+
+<div class="footerDiv" style="text-align=center; direction:ltr; ">
+	 
+	<a href="http://trueislamfromquran.com/"><img src="http://trueislamfromquran.com/sites/default/files/True%20Islam%20Logo.png" height="100" border="0">
+	<br />حقيقة الإسلام من القرءان
+	<br />True Islam from Quran </a>
+	<br /><span style="font-size:1rem; color: black; font-weight: bold;">
+	© 2016, All rights reserved. 
+	</span> 
+</div>	
+	
+</body>
+</html>

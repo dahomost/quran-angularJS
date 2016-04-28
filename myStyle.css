@@ -1,0 +1,409 @@
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  src: url(font/DroidNaskh-Regular.eot);
+  src: url(font/DroidNaskh-Regular.eot?#iefix) format('embedded-opentype'),
+       url(font/DroidNaskh-Regular.woff2) format('woff2'),
+       url(font/DroidNaskh-Regular.woff) format('woff'),
+       url(font/DroidNaskh-Regular.ttf) format('truetype');
+}
+
+body {
+  font-family: myFont, sans-serif;
+  background: white url(images/bg.jpg);
+  background-position: center;
+  direction: rtl;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  padding:0;
+  text-align: justify;
+}
+
+#mobile_wrap {
+  width: 100%
+}
+
+.container {
+  margin: 0;
+  padding:0;
+}
+
+#topBar {
+  margin: 0;
+  padding: .1rem 0 0 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(27,151,187,.7);
+  z-index:5;
+  text-align: center;
+  transition: all linear 1s;
+}
+
+.menuWrapper{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+#topBar2 {
+  margin: 0;
+  padding: .1rem 0 0 0;
+  overflow: hidden;
+  position: relative;
+  top: 3.7rem;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  text-align: center;
+  display: inline-block;
+  transition: all linear 1s;
+  height: 6.1rem;
+}
+
+.inlineDiv {
+  float: right;
+  margin:3px;
+  padding: 0 3px;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 1.2rem;
+  height: 37px;
+  background-color: rgba(0,0,0,.3);
+  padding-bottom: .3rem;
+}
+
+.leftHeader {
+  float: left;
+  margin:0 5px;
+  padding: 0 3px;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.rightHeader {
+  float: right;
+  margin:0 5px;
+  padding: 0 3px;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.leftHeader img {
+  width: 52px;
+}
+
+.audioDiv {
+  display: inline-block;
+  vertical-align: middle;
+  padding: .5rem 0 0 0;
+}
+
+.ayaFound {
+	color:#a00; 
+	background-color:#ffa; 
+}
+
+select {
+  font-size: 1rem;
+  height: 2.1rem;
+  width: 4rem;
+  text-align: center;
+  margin: 0 0 0 1rem;
+  border-radius: 7px;
+}
+
+.receiter {
+  font-size: .8rem;
+  width: 12rem;
+  height:1.9rem;
+  font-family: myFont, sans-serif;
+  margin-top:.5rem;
+  border-radius: 7px;
+}
+
+table td{
+  padding: 2px;
+}
+
+.border {
+  border: 1px solid blue;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.user-nav {
+   background-color: rgba(22,139,140,1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index:10;
+  text-align: center;
+}
+
+.user-nav  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-nav  ul li {
+    border-bottom: 1px dotted #03D4F3;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.user-nav  ul li a {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem .5rem;
+    text-decoration: none;
+}
+
+.user-nav ul li a:hover {
+    background-color: #028396;
+    color: #ff0;
+}
+
+.sn {
+  font-size: 1.5rem;
+  color: #7EEDFE;
+  font-weight: bold;
+  padding-left: 0 auto;
+}
+
+.vn {
+   font-family: arial;
+  /* background-color: #FFFFAA; */
+   border-radius: 50%;
+   font-size: 1.6rem;
+   color: #5060A6;
+   padding:0;
+}
+
+.vn1 {
+   font-family: arial;
+   border-radius: 50%;
+   font-size: 1.6rem;
+   color: #5060A6;
+   padding:0;
+}
+
+.bismiDiv {
+  text-align: center;
+}
+
+.suraTitle {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #000;
+	font-size: 1.3rem
+}
+
+.suratText span:hover {
+   background-color: #ffa;
+}
+
+.verseClicked {
+    background-color: #ffa;
+}
+
+/* -------------------------------------------- */
+
+.suratText {
+    color: black;
+    background-color: rgba(255,255,255,.7);
+    line-height: 230%;
+    padding: .5rem 1rem 2rem 1rem;
+    margin: 6.5rem auto;
+    border: 2.7rem solid transparent;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,.2);
+    font-size: 1.5rem;
+    max-width: 1100px;
+    -webkit-border-image: url(images/bg3.jpg) 62 round; /* Safari 3.1-5 */
+    -o-border-image: url(images/bg3.jpg) 62 round; /* Opera 11-12.1 */
+    border-image: url(images/bg3.jpg) 62 round;
+    position: relative;
+}
+ .inlineDiv a > img {
+	  height: 2.2rem;
+  }
+  
+/* --------------------- Responssive layout ----------------------- */
+@media screen and (max-width: 635px) {
+
+   #topBar {
+      padding: 0;
+	  margin:0;
+    }
+  
+  #topBar2 {
+	padding: 0;
+	margin: 0;
+	top: 6.3rem; 
+  }
+  
+  .menuWrapper{ 
+    width : 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+ 
+.inlineDiv a > img {
+	  height: 1.8rem;
+  }
+  
+  .suratText {
+        border: 1rem solid transparent;
+        -webkit-border-image: url(images/bg3.jpg) 65 round; /* Safari 3.1-5 */
+        -o-border-image: url(images/bg3.jpg) 65 round; /* Opera 11-12.1 */
+        border-image: url(images/bg3.jpg) 65 round;
+        font-size: 1.1rem;
+        max-width: 94%;
+        padding: padding: .5rem .2rem 1rem .2rem;
+        margin: 8.5rem auto;
+  }
+
+  .vn {
+      font-size: .8rem;
+   }
+
+   .bismiDiv img {
+       width: 60%;
+   }
+
+  .leftHeader, .rightHeader {
+    margin:0 2px;
+    padding: 0 2px;
+    font-size: .9rem;
+  }
+
+  select {
+    font-size: .8rem;
+    height: 1.5rem;
+    width: 2.8rem;
+    margin: 0 0 0 0rem;
+  }
+
+  #searchَQuran {
+    font-size: .8rem;
+    height: 1rem;	  
+    border-radius: 5px;
+    margin: 0;
+  }
+  
+	 .receiter {
+		font-size: .8rem;
+	  }
+	  
+	  .leftHeader img {
+		width: 42px;
+	  }
+
+	.user-nav  ul li a {
+		font-size: 1rem;
+	}
+
+	.audioDiv {
+	  clear: both;
+	}
+
+	.searchAyates {
+	   font-size: .9rem;
+	}
+}
+
+input[id="searchStr"] {
+  width:92%; 
+  height:28px; 
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2F6DC2;
+  font-family: myFont, sans-serif;
+  padding: 1px;
+}
+
+#searchQuran {
+  max-width: 20rem; 
+  height: 1.5rem; 
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2F6DC2;
+  font-family: sans-serif;
+  border-radius: 5px;
+}
+
+ #searchButton {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2F6DC2;
+  font-family: sans-serif;
+  border-radius: 5px;
+  margin-top:.47rem;
+}
+
+.searchAyates {
+   background-color: rgba(255,255,200,.2);
+   margin: 1rem;
+   padding: .6rem;
+   border-radius: 1.2rem;
+   font-size: 1.2rem;
+   line-height: 170%;
+   border: 1px dotted #aaa;
+   box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+
+.bi {
+	font-size: 2.1rem;  
+	font-family: times;
+}
+
+.footerDiv {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 1.3rem;
+	background-color: rgba(255,255,255,.5);
+	padding:.3rem;
+}
+
+.footerDiv a {
+   color: #00a;
+   text-decoration: none;
+}
+
+/* ---------------------Print layout ----------------------- */
+
+@media print  {
+  .navbarpages, topBar2 {
+    display: none;
+  }
+
+  .suratText {
+    margin: 0 1rem; 
+    border: 2rem solid transparent;
+    -webkit-border-image: url(images/bg3.jpg) 62 round; /* Safari 3.1-5 */
+    -o-border-image: url(images/bg3.jpg) 62 round; /* Opera 11-12.1 */
+    border-image: url(images/bg3.jpg) 62 round;
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+
+}
+
